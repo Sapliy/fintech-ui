@@ -9,7 +9,7 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-        status: {
+        variant: {
             control: 'select',
             options: ['info', 'success', 'warning', 'error'],
         },
@@ -27,7 +27,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Info: Story = {
     args: {
-        status: 'info',
+        variant: 'info',
         title: 'Information',
         children: 'This is an informational alert message.',
     },
@@ -35,7 +35,7 @@ export const Info: Story = {
 
 export const Success: Story = {
     args: {
-        status: 'success',
+        variant: 'success',
         title: 'Success!',
         children: 'Operation completed successfully.',
     },
@@ -43,7 +43,7 @@ export const Success: Story = {
 
 export const Warning: Story = {
     args: {
-        status: 'warning',
+        variant: 'warning',
         title: 'Warning',
         children: 'Please check your input values.',
     },
@@ -51,7 +51,7 @@ export const Warning: Story = {
 
 export const Error: Story = {
     args: {
-        status: 'error',
+        variant: 'error',
         title: 'Error Occurred',
         children: 'Something went wrong while processing your request.',
     },
@@ -59,7 +59,7 @@ export const Error: Story = {
 
 export const Dismissible: Story = {
     args: {
-        status: 'info',
+        variant: 'info',
         children: 'You can dismiss this alert.',
         dismissible: true,
     },

@@ -11,7 +11,7 @@ const meta = {
     argTypes: {
         variant: {
             control: 'select',
-            options: ['neutral', 'primary', 'success', 'warning', 'error', 'brand'],
+            options: ['default', 'primary', 'success', 'warning', 'error', 'info', 'pending'],
         },
         size: {
             control: 'select',
@@ -32,7 +32,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     args: {
         children: 'Badge',
-        variant: 'neutral',
+        variant: 'default',
     },
 };
 
@@ -47,13 +47,13 @@ export const WithDot: Story = {
 export const StatusWrapper: StoryObj<typeof StatusBadge> = {
     render: (args) => <StatusBadge {...args} />,
     args: {
-        status: 'success',
+        status: 'succeeded',
         children: 'Paid',
     },
     argTypes: {
         status: {
             control: 'select',
-            options: ['success', 'warning', 'error', 'neutral'],
+            options: ['succeeded', 'pending', 'failed', 'processing', 'cancelled'],
         }
     }
 };
