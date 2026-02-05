@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sapliy-primary: #0F172A;
+  --color-sapliy-secondary: #1E293B;
+  --color-sapliy-accent: #3B82F6;
+  --color-sapliy-success: #10B981;
+  --color-sapliy-error: #EF4444;
+  --color-sapliy-surface: #F8FAFC;
+
+  --image-glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+
+  --backdrop-blur-xs: 2px;
+}
+
+@layer components {
+  .sapliy-glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .sapliy-input {
+    @apply block w-full px-4 py-2 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-sapliy-accent focus:border-transparent transition-all outline-none;
+  }
+
+  .sapliy-button-primary {
+    @apply px-6 py-2 bg-sapliy-primary text-white rounded-lg hover:bg-sapliy-secondary active:scale-95 transition-all font-medium;
+  }
+}
