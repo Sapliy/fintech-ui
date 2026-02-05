@@ -1,0 +1,30 @@
+name: CI - fintech-ui
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: fintech-ui/package-lock.json
+
+      - name: Install dependencies
+        run: cd fintech-ui && npm ci
+
+      - name: Lint
+        run: cd fintech-ui && npm run lint
+
+      - name: Type check
+        run: cd fintech-ui && npm run typecheck
+
+      - name: Run Unit Tests
+        run: cd fintech-ui && npm run test
