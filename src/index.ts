@@ -14,6 +14,16 @@ export type { InputProps } from './components/Input';
 export { Badge, StatusBadge } from './components/Badge';
 export type { BadgeProps } from './components/Badge';
 
+// Playbook Components
+export { ConfidenceBadge, confidenceToLevel } from './components/ConfidenceBadge';
+export type { ConfidenceBadgeProps, ConfidenceLevel } from './components/ConfidenceBadge';
+
+export { IntentPreviewCard } from './components/IntentPreviewCard';
+export type { IntentPreviewCardProps, IntentStep } from './components/IntentPreviewCard';
+
+export { DecisionRow } from './components/DecisionRow';
+export type { DecisionRowProps, DecisionStatus } from './components/DecisionRow';
+
 export { Spinner, LoadingOverlay } from './components/Spinner';
 export type { SpinnerProps } from './components/Spinner';
 

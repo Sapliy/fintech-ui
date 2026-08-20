@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PaymentForm } from './PaymentForm';
-import '../styles/fintech.css';
+import '../styles/sapliy.css';
 
 interface CheckoutProps {
     amount: number;

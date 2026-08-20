@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/fintech.css';
+import '../styles/sapliy.css';
 
 export interface Transaction {
     id: string;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useFintech } from '../provider';
-import '../styles/fintech.css';
+import { useSapliy } from '../provider';
+import '../styles/sapliy.css';
 
 interface PaymentFormProps {
     amount: number;
@@ -17,7 +17,7 @@ export const PaymentForm = ({
     onError,
     title = "Payment Details"
 }: PaymentFormProps) => {
-    const { config } = useFintech();
+    const { config } = useSapliy();
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         cardNumber: '',
@@ -108,7 +108,7 @@ export const PaymentForm = ({
                     marginTop: '16px',
                     marginBottom: 0
                 }}>
-                    Securely processed by **Sapliy Fintech**
+                    Securely processed by **Sapliy**
                 </p>
             </form>
         </div>

@@ -1,24 +1,24 @@
 import React, { createContext, useContext } from 'react';
-import { FintechConfig } from '../types';
+import { SapliyConfig } from '../types';
 
-interface FintechContextValue {
-    config: FintechConfig;
+interface SapliyContextValue {
+    config: SapliyConfig;
 }
 
-const FintechContext = createContext<FintechContextValue | undefined>(undefined);
+const SapliyContext = createContext<SapliyContextValue | undefined>(undefined);
 
-export const FintechProvider = ({ config, children }: { config: FintechConfig; children: React.ReactNode }) => {
+export const SapliyProvider = ({ config, children }: { config: SapliyConfig; children: React.ReactNode }) => {
     return (
-        <FintechContext.Provider value={{ config }}>
+        <SapliyContext.Provider value={{ config }}>
             {children}
-        </FintechContext.Provider>
+        </SapliyContext.Provider>
     );
 };
 
-export const useFintech = () => {
-    const context = useContext(FintechContext);
+export const useSapliy = () => {
+    const context = useContext(SapliyContext);
     if (!context) {
-        throw new Error('useFintech must be used within a FintechProvider');
+        throw new Error('useSapliy must be used within a SapliyProvider');
     }
     return context;
 };

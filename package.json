@@ -1,7 +1,7 @@
 {
     "name": "@sapliyio/fintech-ui",
     "version": "1.1.0",
-    "description": "Premium React components for Sapliy Fintech Ecosystem",
+    "description": "React components for the Sapliy AI-Native Financial Operations Platform (legacy package name: @sapliyio/fintech-ui)",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
